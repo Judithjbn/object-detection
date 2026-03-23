@@ -1,0 +1,66 @@
+<section class="detector-page">
+    <div class="detector-page__intro">
+      <p class="detector-page__eyebrow">Detector de objetos</p>
+      <h1>Sube una imagen para analizarla</h1>
+      <p class="detector-page__text">
+        Selecciona una imagen desde tu dispositivo y la aplicación intentará
+        detectar los objetos visibles mediante TensorFlow.js.
+      </p>
+    </div>
+  
+    <div class="detector-layout">
+      <div class="detector-card">
+        <h2>Imagen de entrada</h2>
+  
+        <label class="upload-box" for="imageUpload">
+          <span>Haz clic para subir una imagen</span>
+          <small>Formatos recomendados: JPG, PNG, WEBP</small>
+        </label>
+  
+        <input
+          id="imageUpload"
+          type="file"
+          accept="image/*"
+          (change)="onFileSelected($event)"
+          hidden
+        />
+  
+        @if (imagePreview) {
+          <div class="preview-wrapper">
+            <img
+              [src]="imagePreview"
+              alt="Vista previa de la imagen subida"
+              class="preview-image"
+            />
+          </div>
+        }
+      </div>
+  
+      <div class="detector-card">
+        <h2>Resultados</h2>
+  
+        @if (isLoading) {
+          <p class="status-message">Analizando imagen...</p>
+        }
+  
+        @if (!isLoading && predictions.length === 0) {
+          <p class="status-message">
+            Aquí aparecerán los objetos detectados.
+          </p>
+        }
+  
+        @if (predictions.length > 0) {
+          <ul class="results-list">
+            @for (prediction of predictions; track prediction.class) {
+              <li class="result-item">
+                <div>
+                  <strong>{{ prediction.class }}</strong>
+                  <p>Confianza: {{ prediction.score | percent }}</p>
+                </div>
+              </li>
+            }
+          </ul>
+        }
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,110 @@
+.detector-page {
+    padding: 48px 32px;
+}
+.detector-page__intro {
+    max-width: 760px;
+    margin-bottom: 32px;
+}
+/*target*/
+.detector-page__eyebrow {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 16px;
+    width: fit-content;
+    min-width: 0;
+}
+.detector-page__intro h1 {
+    margin: 0 0 16px;
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  .detector-page__text {
+    color: #8a8a8b;
+    line-height: 1.7;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  .detector-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+  }
+  .detector-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(247, 248, 250, 0.08);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  }
+
+  .upload-box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 24px;
+    border: 2px dashed rgba(255, 200, 0, 0.35);
+    border-radius: 14px;
+    cursor: pointer;
+    color: var(--accent-color);
+    background: rgba(46, 55, 78, 0.574);
+    margin-bottom: 20px;
+  }
+  .upload-box small {
+    color: #a9b3c7;
+  }
+  .preview-wrapper {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(247, 248, 250, 0.08);
+    background: #09111f;
+  }
+  .preview-image {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+  }
+  .status-message {
+    color: rgba(46, 55, 78, 0.574);
+    font-style: italic;
+  }
+  .results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .result-item {
+    padding: 16px;
+    border-radius: 12px;
+    background: rgba(255, 200, 0, 0.706);
+  }
+  
+  .result-item p {
+    margin: 6px 0 0;
+    color: var(--primary-color);
+  }
+  
+  @media (max-width: 900px) {
+    .detector-layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .detector-page {
+      padding: 32px 20px;
+    }
+  
+    .detector-page__intro h1 {
+      font-size: 2rem;
+    }
+  }
+  

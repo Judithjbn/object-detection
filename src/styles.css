@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #121a2b;
+    --secondary-color: #dbdbdb;
+    --accent-color: #FFC800;
+}
+body {
+    min-height: 100vh;
+    background: #dbdbdb;
+    color: #121a2b;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px 16px;
+    margin: 0 auto;
+}
