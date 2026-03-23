@@ -9,5 +9,5 @@ import { AppHeader } from './shared/components/app-header/app-header';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('vueling-object-detector');
+  protected readonly title = signal('Object-detector');
 }

@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "vueling-object-detector": {
+    "object-detector": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "vueling-object-detector:build:production"
+              "buildTarget": "object-detector:build:production"
             },
             "development": {
-              "buildTarget": "vueling-object-detector:build:development"
+              "buildTarget": "object-detector:build:development"
             }
           },
           "defaultConfiguration": "development"
